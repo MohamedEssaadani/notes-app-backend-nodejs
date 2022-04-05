@@ -7,7 +7,7 @@ import Note from "../models/note.js";
  * @access public
  */
 export const getAllNotes = expressAsyncHandler(async (req, res) => {
-  const notes = Note.find({});
+  const notes = await Note.find({});
   res.json(notes);
 });
 

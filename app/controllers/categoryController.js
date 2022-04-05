@@ -7,7 +7,7 @@ import Category from "../models/category.js";
  * @access public
  */
 export const getAllCategories = asyncHandler(async (req, res) => {
-  const categories = await Category.find({ s });
+  const categories = await Category.find({});
   res.json(categories);
 });
 
